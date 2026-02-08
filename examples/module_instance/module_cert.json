@@ -40,6 +40,10 @@
       {
         "path": "artifacts/module_instance/hello3.txt",
         "sha256": "REPLACE_ME"
+      },
+      {
+        "path": "artifacts/module_instance/hello3.txt",
+        "sha256": "9614e70221e9a1463c24e7b88bec04de9baa87b2337668d2e64c7f52ec41ac04"
       }
     ]
   },

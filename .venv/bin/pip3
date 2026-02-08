@@ -1,4 +1,4 @@
-#!/Users/inaciof.vasquez/github-audit/urf-spine/.venv/bin/python3
+#!/Users/inaciof.vasquez/github-audit/urf-spine/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

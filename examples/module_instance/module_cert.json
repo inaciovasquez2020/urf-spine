@@ -3,8 +3,12 @@
     "name": "urf-demo-module",
     "version": "v0.0.1",
     "interfaces": {
-      "imports": ["urf-spine"],
-      "exports": ["demo:hello"]
+      "imports": [
+        "urf-spine"
+      ],
+      "exports": [
+        "demo:hello"
+      ]
     },
     "invariants": [
       "deterministic-replay",
@@ -14,7 +18,7 @@
     ]
   },
   "spine": {
-    "version": "v1.0.0",
+    "version": "v1.1.0",
     "environment": {
       "oci_image_digest": "sha256:REPLACE_ME"
     },
@@ -25,7 +29,14 @@
   },
   "evidence": {
     "artifacts": [
-      { "path": "artifacts/module_instance/hello.txt", "sha256": "f154089fd1cce3d98649754f45f236a820473829f79a7028cfc86c7b9339c6d2" }
+      {
+        "path": "artifacts/module_instance/hello.txt",
+        "sha256": "f154089fd1cce3d98649754f45f236a820473829f79a7028cfc86c7b9339c6d2"
+      },
+      {
+        "path": "artifacts/module_instance/hello2.txt",
+        "sha256": "c86d8f950a34c69156313f12408df33429fe64f1ae52070abe3e080a62d2182e"
+      }
     ]
   },
   "hashes": {

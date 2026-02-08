@@ -1,3 +1,4 @@
+import Mathlib.Data.String.Basic
 import URFSpine.SpineSNFCanonicalRep
 
 namespace URFSpine
@@ -11,14 +12,9 @@ def le2 (a b : Artifact) : Bool := decide (key2 a ≤ key2 b)
 def SNF1 (xs : List Artifact) : List Artifact := xs.mergeSort le1
 def SNF2 (xs : List Artifact) : List Artifact := xs.mergeSort le2
 
-theorem key2_refines_key1 :
-  ∀ a b, key1 a < key1 b → key2 a < key2 b := by
+-- no `LT (String × String)` needed; only `≤` on Prod, which exists
+theorem le2_of_le1 : ∀ a b, key1 a ≤ key1 b → key2 a ≤ key2 b := by
   intro a b h
-  simpa [key1, key2] using h
-
-theorem le2_of_le1_and_eqsuffix :
-  ∀ a b, key1 a ≤ key1 b → key2 a ≤ key2 b := by
-  intro a b h
-  simpa [key1, key2] using h
+  simpa [key1, key2] using And.intro h (le_rfl : ("" : String) ≤ "")
 
 end URFSpine

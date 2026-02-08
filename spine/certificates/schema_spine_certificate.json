@@ -1,9 +1,31 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "URF Spine Certificate",
+  "title": "URF Spine Certificate (v1.1.0)",
   "type": "object",
   "required": ["spine", "evidence", "hashes"],
   "properties": {
+    "module": {
+      "type": "object",
+      "required": ["name", "version", "interfaces", "invariants"],
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "interfaces": {
+          "type": "object",
+          "required": ["imports", "exports"],
+          "properties": {
+            "imports": { "type": "array", "items": { "type": "string" } },
+            "exports": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "invariants": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
     "spine": {
       "type": "object",
       "required": ["version", "environment", "manifest"],

@@ -1,6 +1,6 @@
 {
   "object": "URF_SPINE",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "role": "Invariant Anchor Layer",
   "depends_on": [
     "urf-core",

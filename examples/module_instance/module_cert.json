@@ -1,0 +1,34 @@
+{
+  "module": {
+    "name": "urf-demo-module",
+    "version": "v0.0.1",
+    "interfaces": {
+      "imports": ["urf-spine"],
+      "exports": ["demo:hello"]
+    },
+    "invariants": [
+      "deterministic-replay",
+      "sha256-artifact-hashes",
+      "snf-artifact-sorting",
+      "merkle-root-over-(path,sha256)"
+    ]
+  },
+  "spine": {
+    "version": "v1.0.0",
+    "environment": {
+      "oci_image_digest": "sha256:REPLACE_ME"
+    },
+    "manifest": {
+      "ordering": "lex(path)",
+      "merkle_root_sha256": "REPLACE_ME"
+    }
+  },
+  "evidence": {
+    "artifacts": [
+      { "path": "artifacts/module_instance/hello.txt", "sha256": "f154089fd1cce3d98649754f45f236a820473829f79a7028cfc86c7b9339c6d2" }
+    ]
+  },
+  "hashes": {
+    "certificate_sha256": ""
+  }
+}

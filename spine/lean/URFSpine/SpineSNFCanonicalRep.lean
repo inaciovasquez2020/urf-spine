@@ -1,3 +1,7 @@
+import Mathlib.Data.List.Sort
+import Mathlib.Data.List.Perm
+import Mathlib.Tactic
+
 namespace URFSpine
 
 open List
@@ -8,29 +12,23 @@ structure Artifact where
 deriving DecidableEq, Repr
 
 def key (a : Artifact) : String := a.path
-def leA (a b : Artifact) : Prop := key a ≤ key b
+
+def leA (a b : Artifact) : Bool := key a ≤ key b
 
 def SNF (xs : List Artifact) : List Artifact := xs.mergeSort leA
 
-/-- Multiset equality as Permutation (List.Perm). -/
-def multisetEq (xs ys : List Artifact) : Prop := Permutation xs ys
+def multisetEq (xs ys : List Artifact) : Prop := xs.Perm ys
 
-/-- SNF is a canonical representative: SNF(xs)=SNF(ys) ↔ xs ~ ys. -/
 theorem SNF_eq_iff_perm (xs ys : List Artifact) :
   SNF xs = SNF ys ↔ multisetEq xs ys := by
   constructor
   · intro h
-    -- xs ~ SNF xs and ys ~ SNF ys, so xs ~ ys.
-    have px : Permutation xs (SNF xs) := by
-      simpa [SNF] using (List.perm_mergeSort (r:=leA) xs)
-    have py : Permutation ys (SNF ys) := by
-      simpa [SNF] using (List.perm_mergeSort (r:=leA) ys)
+    have px : xs.Perm (SNF xs) := by
+      simpa [SNF] using (List.perm_mergeSort (r := leA) xs)
+    have py : ys.Perm (SNF ys) := by
+      simpa [SNF] using (List.perm_mergeSort (r := leA) ys)
     exact px.trans (h ▸ py.symm)
   · intro p
-    -- If xs ~ ys, mergeSort outputs equal canonical lists (stability lemma).
-    -- Minimal missing lemma:
-    --   Permutation xs ys → mergeSort leA xs = mergeSort leA ys
-    -- Add later if your Mathlib build lacks it.
-    admit
+    simpa [SNF] using (List.mergeSort_eq_of_perm (r := leA) p)
 
 end URFSpine

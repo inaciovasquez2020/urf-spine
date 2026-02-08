@@ -1,5 +1,3 @@
+import URFSpine.Core.Artifact
 import URFSpine.SpineSNFCanonicalRep
 import URFSpine.SpineHashModelTamper
-
-namespace URFSpine
-end URFSpine

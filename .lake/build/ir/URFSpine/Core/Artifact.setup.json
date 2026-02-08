@@ -1,0 +1,7 @@
+{"plugins": [],
+ "package": "urf_spine",
+ "options": {"pp.unicode.fun": true},
+ "name": "URFSpine.Core.Artifact",
+ "isModule": false,
+ "importArts": {},
+ "dynlibs": []}

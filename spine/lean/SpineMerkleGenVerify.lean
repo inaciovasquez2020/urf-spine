@@ -10,7 +10,7 @@ def cat (a b : ByteArray) : ByteArray := a ++ b
 def pairHash (l r : ByteArray) : ByteArray := Hash (cat l r)
 
 /-- One Merkle level (duplicate last if odd). -/
-def merkleStep : List ByteArray → List ByteArray
+noncomputable def merkleStep : List ByteArray → List ByteArray
 | []        => []
 | [x]       => [pairHash x x]
 | x::y::xs  => pairHash x y :: merkleStep xs

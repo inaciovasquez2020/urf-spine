@@ -18,7 +18,7 @@ def foldProof (leaf : ByteArray) (pf : List ProofElem) : ByteArray :=
       else pairHash e.sibling acc)
     leaf
 
-def merkleStep : List ByteArray → List ByteArray
+noncomputable def merkleStep : List ByteArray → List ByteArray
 | []        => []
 | [x]       => [pairHash x x]
 | x::y::xs  => pairHash x y :: merkleStep xs

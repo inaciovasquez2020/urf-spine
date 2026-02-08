@@ -1,0 +1,18 @@
+{
+  "object": "URF_SPINE",
+  "version": "v1.0.0",
+  "role": "Invariant Anchor Layer",
+  "depends_on": [
+    "urf-core",
+    "chronos-entropydepth"
+  ],
+  "guarantees": [
+    "Invariant preservation under certified interfaces",
+    "Certificate composability",
+    "Replay determinism (stable canonicalization + hashing)"
+  ],
+  "entrypoints": {
+    "verify": "python3 verification/spine_verify.py examples/minimal_spine_certificate.json",
+    "snf": "python3 verification/snf.py examples/minimal_spine_certificate.json"
+  }
+}

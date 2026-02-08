@@ -1,11 +1,19 @@
-URF Forced-Dependency Spine
+# urf-spine
 
-This repository defines the minimal, canonical dependency spine of the Unified Rigidity Framework.
+Invariant anchor + canonicalization + certificate composition layer for URF modules.
 
-Each theorem below is a citation sink:
-- It imports URF axioms verbatim
-- It has no alternative proof path
-- Downstream results must depend on it
+## Objects
+- **Spine Functor**: `URFMod -> SpineRep` (see `spine/invariants/spine_functor.md`)
+- **SNF** (Spine Normal Form): deterministic canonical reduction (see `verification/snf.py`)
+- **Certificate schema**: `spine/certificates/schema_spine_certificate.json`
+- **Verifier**: `verification/spine_verify.py`
 
-Status
-Canonical and frozen.
+## Quick start (local)
+- Verify an example certificate:
+  - `python3 verification/spine_verify.py examples/minimal_spine_certificate.json`
+- Produce SNF:
+  - `python3 verification/snf.py examples/minimal_spine_certificate.json`
+
+## Links
+- urf-core: https://github.com/inaciovasquez2020/urf-core
+- chronos-entropydepth: https://github.com/inaciovasquez2020/chronos-entropydepth

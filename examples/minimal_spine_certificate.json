@@ -1,0 +1,21 @@
+{
+  "spine": {
+    "version": "v1.0.0",
+    "environment": {
+      "oci_image_digest": "sha256:REPLACE_ME"
+    },
+    "manifest": {
+      "ordering": "lex(path)",
+      "merkle_root_sha256": "REPLACE_ME"
+    }
+  },
+  "evidence": {
+    "artifacts": [
+      { "path": "README.md", "sha256": "REPLACE_ME" },
+      { "path": "SPINE_MANIFEST.json", "sha256": "REPLACE_ME" }
+    ]
+  },
+  "hashes": {
+    "certificate_sha256": ""
+  }
+}

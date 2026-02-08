@@ -36,6 +36,10 @@
       {
         "path": "artifacts/module_instance/hello2.txt",
         "sha256": "c86d8f950a34c69156313f12408df33429fe64f1ae52070abe3e080a62d2182e"
+      },
+      {
+        "path": "artifacts/module_instance/hello3.txt",
+        "sha256": "REPLACE_ME"
       }
     ]
   },

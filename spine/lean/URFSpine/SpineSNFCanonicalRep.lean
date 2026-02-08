@@ -1,17 +1,12 @@
 import Mathlib.Data.List.Sort
-import Mathlib.Data.List.Basic
-import URFSpine.Core.Artifact
-
+import Mathlib.Data.List.Permutation
 namespace URFSpine
-
+structure Artifact where
+path : String
+deriving DecidableEq, Repr
 def key (a : Artifact) : String := a.path
-
-def leA (a b : Artifact) : Bool := key a ≤ key b
-
+def leA (a b : Artifact) : Bool := decide (key a ≤ key b)
 def SNF (xs : List Artifact) : List Artifact := xs.mergeSort leA
-
-theorem SNF_perm (xs : List Artifact) :
-  (SNF xs).Perm xs := by
-  simpa [SNF] using (List.mergeSort_perm xs leA)
-
+theorem SNF_perm (xs : List Artifact) : xs.Perm (SNF xs) := by
+simpa [SNF, leA] using (List.mergeSort_perm xs leA).symm
 end URFSpine

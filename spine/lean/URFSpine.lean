@@ -1,3 +1,2 @@
-import URFSpine.Core.Artifact
 import URFSpine.SpineSNFCanonicalRep
 import URFSpine.SpineHashModelTamper

@@ -1,19 +1,18 @@
-import URFSpine.SpineBase
-import Mathlib.Data.List.Permutation
-import Init.Data.List.Sort.Basic
-import Init.Data.List.Sort.Lemmas
+import Mathlib.Data.List.Sort
 
 namespace URFSpine
 
-set_option autoImplicit false
-
-/-- SNF via stdlib mergeSort (Bool comparator). -/
+/-- Canonical SNF representation = mergesort under comparator. -/
 def SNF (cmp : Artifact → Artifact → Bool) (xs : List Artifact) : List Artifact :=
   xs.mergeSort cmp
 
-theorem SNF_perm (cmp : Artifact → Artifact → Bool) (xs : List Artifact) :
-  List.Perm xs (SNF cmp xs) :=
+/-- SNF preserves permutation (canonical Lean 4.27 mathlib lemma). -/
+theorem SNF_perm
+  (cmp : Artifact → Artifact → Bool)
+  (xs : List Artifact) :
+  (SNF cmp xs).Perm xs :=
 by
-  simpa [SNF] using (List.Perm.symm (List.mergeSort_perm (le := cmp) xs))
+  unfold SNF
+  simpa using (List.mergeSort_perm (le := cmp) xs)
 
 end URFSpine

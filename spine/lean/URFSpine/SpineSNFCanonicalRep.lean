@@ -2,11 +2,11 @@ import Mathlib.Data.List.Sort
 
 namespace URFSpine
 
-/-- Canonical SNF representation = mergesort under comparator. -/
+/-- Canonical SNF representation = mergeSort under comparator. -/
 def SNF (cmp : Artifact → Artifact → Bool) (xs : List Artifact) : List Artifact :=
   xs.mergeSort cmp
 
-/-- SNF preserves permutation (canonical Lean 4.27 mathlib lemma). -/
+/-- SNF preserves permutation via mergeSort_perm (Lean 4.27 mathlib). -/
 theorem SNF_perm
   (cmp : Artifact → Artifact → Bool)
   (xs : List Artifact) :

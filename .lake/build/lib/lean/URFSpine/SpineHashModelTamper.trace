@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["83bbaa15910e77de.olean"],
-  "i": "a312deb20860d770.ilean",
-  "c": "87d674616aad309d.c"},
+ {"o": ["7c9cf9e4424a35f2.olean"],
+  "i": "043a2040ffd9ee18.ilean",
+  "c": "234e63c8355e4477.c"},
  "log":
  [{"message":
    ".> LEAN_PATH=/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/Cli/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/batteries/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/Qq/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/aesop/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/importGraph/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/plausible/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean:/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean /Users/inaciof.vasquez/.elan/toolchains/leanprover--lean4---v4.27.0/bin/lean /Users/inaciof.vasquez/github-audit/urf-spine/spine/lean/URFSpine/SpineHashModelTamper.lean -o /Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineHashModelTamper.olean -i /Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineHashModelTamper.ilean -c /Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/ir/URFSpine/SpineHashModelTamper.c --setup /Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/ir/URFSpine/SpineHashModelTamper.setup.json --json",
@@ -13,10 +13,7 @@
    [["deps",
      [["urf_spine/URFSpine:extraDep",
        [["@urf_spine:extraDep", "00000000000006bb"]]],
-      ["imports",
-       [["URFSpine.Core.Artifact transitive imports (legacy)",
-         "00000000000006bb"],
-        ["URFSpine.Core.Artifact:importAllArts", "5161dc3107e43ad5"]]]]],
+      ["imports", "00000000000006bb"]]],
     ["libs",
      [["import dynlibs", "00000000000006bb"],
       ["package external libraries", "00000000000006bb"],
@@ -25,7 +22,7 @@
   ["Lean 4.27.0, commit db93fe1608548721853390a10cd40580fe7d22ae",
    "9a2be90fd35343e5"],
   ["/Users/inaciof.vasquez/github-audit/urf-spine/spine/lean/URFSpine/SpineHashModelTamper.lean",
-   "ce3bfe9e7506ac96"],
+   "9ff2c381bac705dd"],
   ["options", [["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "e3ffe866795a3c4d"}
+ "depHash": "923a2f38e0786052"}

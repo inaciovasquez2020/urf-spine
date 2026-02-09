@@ -3,7 +3,5 @@
  "options": {"pp.unicode.fun": true},
  "name": "URFSpine.SpineHashModelTamper",
  "isModule": false,
- "importArts":
- {"URFSpine.Core.Artifact":
-  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/Core/Artifact.olean"]},
+ "importArts": {},
  "dynlibs": []}

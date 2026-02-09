@@ -4,9 +4,7 @@
  "name": "URFSpine.SpineSNFCanonicalRep",
  "isModule": false,
  "importArts":
- {"URFSpine.Core.Artifact":
-  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/Core/Artifact.olean"],
-  "Qq.Typ":
+ {"Qq.Typ":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.server",

@@ -1,0 +1,59 @@
+82369cc045cdfed1f818dc0e0f84f7a28feff3d5
+commit 82369cc045cdfed1f818dc0e0f84f7a28feff3d5
+Author: inaciovasquez2020 <iinaciovasquez2020@gmail.com>
+Date:   Sun Feb 8 19:35:08 2026 -0300
+
+    Fix Lean import ordering in SpineHashModelTamper
+
+ .lake/build/ir/URFSpine.c                          |   41 +
+ .lake/build/ir/URFSpine.c.hash                     |    1 +
+ .lake/build/ir/URFSpine.setup.json                 | 2673 ++++++++++++++++++++
+ .lake/build/ir/URFSpine/Core/Artifact.c            |  316 +++
+ .lake/build/ir/URFSpine/Core/Artifact.c.hash       |    1 +
+ .lake/build/ir/URFSpine/Core/Artifact.setup.json   |    7 +
+ .lake/build/ir/URFSpine/SpineHashModelTamper.c     |   53 +
+ .../build/ir/URFSpine/SpineHashModelTamper.c.hash  |    1 +
+ .../ir/URFSpine/SpineHashModelTamper.setup.json    |    9 +
+ .lake/build/ir/URFSpine/SpineSNFCanonicalRep.c     |  103 +
+ .../build/ir/URFSpine/SpineSNFCanonicalRep.c.hash  |    1 +
+ .../ir/URFSpine/SpineSNFCanonicalRep.setup.json    | 2669 +++++++++++++++++++
+ .lake/build/lib/lean/URFSpine.ilean                |    1 +
+ .lake/build/lib/lean/URFSpine.ilean.hash           |    1 +
+ .lake/build/lib/lean/URFSpine.olean                |  Bin 0 -> 37640 bytes
+ .lake/build/lib/lean/URFSpine.olean.hash           |    1 +
+ .lake/build/lib/lean/URFSpine.trace                |   37 +
+ .lake/build/lib/lean/URFSpine/Core/Artifact.ilean  |    1 +
+ .../lib/lean/URFSpine/Core/Artifact.ilean.hash     |    1 +
+ .lake/build/lib/lean/URFSpine/Core/Artifact.olean  |  Bin 0 -> 85880 bytes
+ .../lib/lean/URFSpine/Core/Artifact.olean.hash     |    1 +
+ .lake/build/lib/lean/URFSpine/Core/Artifact.trace  |   28 +
+ .../lib/lean/URFSpine/SpineHashModelTamper.ilean   |    1 +
+ .../lean/URFSpine/SpineHashModelTamper.ilean.hash  |    1 +
+ .../lib/lean/URFSpine/SpineHashModelTamper.olean   |  Bin 0 -> 51128 bytes
+ .../lean/URFSpine/SpineHashModelTamper.olean.hash  |    1 +
+ .../lib/lean/URFSpine/SpineHashModelTamper.trace   |   31 +
+ .../lib/lean/URFSpine/SpineSNFCanonicalRep.ilean   |    1 +
+ .../lean/URFSpine/SpineSNFCanonicalRep.ilean.hash  |    1 +
+ .../lib/lean/URFSpine/SpineSNFCanonicalRep.olean   |  Bin 0 -> 49640 bytes
+ .../lean/URFSpine/SpineSNFCanonicalRep.olean.hash  |    1 +
+ .../lib/lean/URFSpine/SpineSNFCanonicalRep.trace   |   37 +
+ .lake/config/[anonymous]/lakefile.olean            |  Bin 0 -> 137816 bytes
+ .lake/config/[anonymous]/lakefile.olean.trace      |    6 +
+ .lake/packages/Cli                                 |    1 +
+ .lake/packages/LeanSearchClient                    |    1 +
+ .lake/packages/Qq                                  |    1 +
+ .lake/packages/aesop                               |    1 +
+ .lake/packages/batteries                           |    1 +
+ .lake/packages/importGraph                         |    1 +
+ .lake/packages/mathlib                             |    1 +
+ .lake/packages/plausible                           |    1 +
+ .lake/packages/proofwidgets                        |    1 +
+ SpineHashModelTamper.lean                          |    0
+ lake-manifest.json                                 |   26 +-
+ spine/lean/SpineMerkleGenVerify.lean               |    2 +-
+ spine/lean/SpineMerkleGenVerifySound.lean          |    2 +-
+ spine/lean/URFSpine.lean                           |    4 +-
+ spine/lean/URFSpine/Core/Artifact.lean             |    7 +
+ spine/lean/URFSpine/SpineHashModelTamper.lean      |   43 +-
+ spine/lean/URFSpine/SpineSNFCanonicalRep.lean      |   15 +-
+ 51 files changed, 6069 insertions(+), 65 deletions(-)

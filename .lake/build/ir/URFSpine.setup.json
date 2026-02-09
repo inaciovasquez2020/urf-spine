@@ -4,12 +4,20 @@
  "name": "URFSpine",
  "isModule": false,
  "importArts":
- {"URFSpine.SpineSNFCanonicalRep":
+ {"URFSpine.ToolchainHashWitness":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/ToolchainHashWitness.olean"],
+  "URFSpine.SpineSNFCanonicalRep":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineSNFCanonicalRep.olean"],
+  "URFSpine.SpineQuotSNF":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineQuotSNF.olean"],
+  "URFSpine.SpineKeyRefinementStability":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineKeyRefinementStability.olean"],
+  "URFSpine.SpineKeyLexRefinement":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineKeyLexRefinement.olean"],
   "URFSpine.SpineHashModelTamper":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineHashModelTamper.olean"],
-  "URFSpine.Core.Artifact":
-  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/Core/Artifact.olean"],
+  "URFSpine.SpineBase":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/build/lib/lean/URFSpine/SpineBase.olean"],
   "Qq.Typ":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir",
@@ -1430,6 +1438,11 @@
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Find.ir",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Find.olean.server",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Find.olean.private"],
+  "Mathlib.Data.Nat.Factorial.Basic":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Basic.olean",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Basic.ir",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Basic.olean.server",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Basic.olean.private"],
   "Mathlib.Data.Nat.Basic":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.olean",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.ir",
@@ -1440,6 +1453,16 @@
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Sort.ir",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Sort.olean.server",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Sort.olean.private"],
+  "Mathlib.Data.List.Permutation":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Permutation.olean",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Permutation.ir",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Permutation.olean.server",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Permutation.olean.private"],
+  "Mathlib.Data.List.Perm.Basic":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Perm/Basic.olean",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Perm/Basic.ir",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Perm/Basic.olean.server",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Perm/Basic.olean.private"],
   "Mathlib.Data.List.OfFn":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/OfFn.olean",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/OfFn.ir",
@@ -1455,16 +1478,36 @@
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Monad.ir",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Monad.olean.server",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Monad.olean.private"],
+  "Mathlib.Data.List.InsertIdx":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/InsertIdx.olean",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/InsertIdx.ir",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/InsertIdx.olean.server",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/InsertIdx.olean.private"],
+  "Mathlib.Data.List.Induction":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Induction.olean",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Induction.ir",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Induction.olean.server",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Induction.olean.private"],
   "Mathlib.Data.List.Forall2":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Forall2.olean",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Forall2.ir",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Forall2.olean.server",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Forall2.olean.private"],
+  "Mathlib.Data.List.Duplicate":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Duplicate.olean",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Duplicate.ir",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Duplicate.olean.server",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Duplicate.olean.private"],
   "Mathlib.Data.List.Defs":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Defs.olean",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Defs.ir",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Defs.olean.server",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Defs.olean.private"],
+  "Mathlib.Data.List.Count":
+  ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Count.olean",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Count.ir",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Count.olean.server",
+   "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Count.olean.private"],
   "Mathlib.Data.List.Basic":
   ["/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Basic.olean",
    "/Users/inaciof.vasquez/github-audit/urf-spine/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/List/Basic.ir",

@@ -1,6 +1,6 @@
 // Lean compiler output
 // Module: URFSpine
-// Imports: public import Init public import URFSpine.Core.Artifact public import URFSpine.SpineSNFCanonicalRep public import URFSpine.SpineHashModelTamper
+// Imports: public import Init public import URFSpine.SpineSNFCanonicalRep public import URFSpine.SpineHashModelTamper public import URFSpine.SpineKeyRefinementStability public import URFSpine.SpineQuotSNF public import URFSpine.ToolchainHashWitness public import URFSpine.SpineKeyLexRefinement
 #include <lean/lean.h>
 #if defined(__clang__)
 #pragma clang diagnostic ignored "-Wunused-parameter"
@@ -14,9 +14,12 @@
 extern "C" {
 #endif
 lean_object* initialize_Init(uint8_t builtin);
-lean_object* initialize_urf__spine_URFSpine_Core_Artifact(uint8_t builtin);
 lean_object* initialize_urf__spine_URFSpine_SpineSNFCanonicalRep(uint8_t builtin);
 lean_object* initialize_urf__spine_URFSpine_SpineHashModelTamper(uint8_t builtin);
+lean_object* initialize_urf__spine_URFSpine_SpineKeyRefinementStability(uint8_t builtin);
+lean_object* initialize_urf__spine_URFSpine_SpineQuotSNF(uint8_t builtin);
+lean_object* initialize_urf__spine_URFSpine_ToolchainHashWitness(uint8_t builtin);
+lean_object* initialize_urf__spine_URFSpine_SpineKeyLexRefinement(uint8_t builtin);
 static bool _G_initialized = false;
 LEAN_EXPORT lean_object* initialize_urf__spine_URFSpine(uint8_t builtin) {
 lean_object * res;
@@ -25,13 +28,22 @@ _G_initialized = true;
 res = initialize_Init(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
-res = initialize_urf__spine_URFSpine_Core_Artifact(builtin);
-if (lean_io_result_is_error(res)) return res;
-lean_dec_ref(res);
 res = initialize_urf__spine_URFSpine_SpineSNFCanonicalRep(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 res = initialize_urf__spine_URFSpine_SpineHashModelTamper(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_urf__spine_URFSpine_SpineKeyRefinementStability(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_urf__spine_URFSpine_SpineQuotSNF(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_urf__spine_URFSpine_ToolchainHashWitness(builtin);
+if (lean_io_result_is_error(res)) return res;
+lean_dec_ref(res);
+res = initialize_urf__spine_URFSpine_SpineKeyLexRefinement(builtin);
 if (lean_io_result_is_error(res)) return res;
 lean_dec_ref(res);
 return lean_io_result_mk_ok(lean_box(0));

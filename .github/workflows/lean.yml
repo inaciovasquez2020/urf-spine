@@ -29,3 +29,9 @@ jobs:
 
       - name: Build
         run: lake build
+      - name: Guard: forbid List.sort in spine/lean
+        run: |
+          if grep -R --line-number "List.sort" spine/lean; then
+            echo "ERROR: List.sort is forbidden; use mergeSort/mergeSort_perm via URFSpine.SpineSNF"
+            exit 1
+          fi

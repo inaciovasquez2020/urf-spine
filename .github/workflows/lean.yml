@@ -3,6 +3,14 @@ name: Lean
 on:
   push:
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -29,9 +37,10 @@ jobs:
 
       - name: Build
         run: lake build
+
       - name: Guard: forbid List.sort in spine/lean
         run: |
           if grep -R --line-number "List.sort" spine/lean; then
-            echo "ERROR: List.sort is forbidden; use mergeSort/mergeSort_perm via URFSpine.SpineSNF"
+            echo "ERROR: List.sort is forbidden"
             exit 1
           fi

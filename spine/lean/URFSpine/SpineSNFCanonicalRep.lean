@@ -2,7 +2,7 @@ import Mathlib.Data.List.Sort
 
 namespace URFSpine
 
-/-- Canonical SNF representation = mergeSort under comparator. -/
+/-- Canonical SNF representation = mergesort under comparator. -/
 def SNF (cmp : Artifact → Artifact → Bool) (xs : List Artifact) : List Artifact :=
   xs.mergeSort cmp
 

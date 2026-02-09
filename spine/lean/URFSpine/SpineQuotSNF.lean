@@ -1,3 +1,4 @@
+import URFSpine.SpineSNFCanonicalRep
 import Mathlib.Data.List.Sort
 
 namespace URFSpine

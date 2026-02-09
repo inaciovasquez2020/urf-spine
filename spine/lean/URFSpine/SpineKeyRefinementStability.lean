@@ -1,5 +1,4 @@
 import URFSpine.SpineBase
-import URFSpine.SpineSNFCanonicalRep
 
 namespace URFSpine
 

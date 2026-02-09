@@ -1,4 +1,3 @@
-import URFSpine.SpineSNFCanonicalRep
 import Mathlib.Data.List.Permutation
 
 namespace URFSpine

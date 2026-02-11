@@ -1,0 +1,35 @@
+name: spine-check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Lean toolchain
+        uses: leanprover/lean-action@v1
+        with:
+          build: false
+
+      - name: Restore mathlib cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .lake/packages
+            .lake/build
+          key: ${{ runner.os }}-lean-${{ hashFiles('lakefile.lean', 'lakefile.toml', 'lean-toolchain') }}
+          restore-keys: |
+            ${{ runner.os }}-lean-
+
+      - name: Spine check
+        run: ./scripts/spine check

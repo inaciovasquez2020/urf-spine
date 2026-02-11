@@ -17,3 +17,9 @@ Invariant anchor + canonicalization + certificate composition layer for URF modu
 ## Links
 - urf-core: https://github.com/inaciovasquez2020/urf-core
 - chronos-entropydepth: https://github.com/inaciovasquez2020/chronos-entropydepth
+
+## Quickstart (60 seconds)
+
+```bash
+./scripts/spine check
+```

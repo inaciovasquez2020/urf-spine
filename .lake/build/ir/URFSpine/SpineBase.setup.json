@@ -1,7 +1,0 @@
-{"plugins": [],
- "package": "urf_spine",
- "options": {"pp.unicode.fun": true},
- "name": "URFSpine.SpineBase",
- "isModule": false,
- "importArts": {},
- "dynlibs": []}

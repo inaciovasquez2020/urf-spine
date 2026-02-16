@@ -8,7 +8,7 @@
   "object": {
     "kind": "graph",
     "size": { "n": 50, "m": 75 },
-    "content_hash": "sha256:<HEX_HASH>"
+    "content_hash": "sha256:02d17d57cd7bf08fa3bb01d47f65b831d70121b2db550b7e8ee9447e9a40abd3"
   },
   "claim": {
     "statement_id": "P1-WL1",
@@ -28,7 +28,7 @@
     ]
   },
   "provenance": {
-    "git_commit": "<COMMIT_9_1>",
+    "git_commit": "12047af",
     "verifier": "manual",
     "platform": "macos-arm64"
   }

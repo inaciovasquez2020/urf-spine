@@ -1,0 +1,30 @@
+{
+  "schema_id": "urf:umo-registry:1.0",
+  "updated_utc": "2026-02-15T00:00:00Z",
+  "items": [
+    {
+      "umo_id": "UMO_G0_WL1_0001",
+      "object_kind": "graph",
+      "n": 50,
+      "m": 75,
+      "baseline": "WL-1",
+      "status": "minimal",
+      "cert_path": "certs/UMO_G0_WL1_CERT_0001.json",
+      "object_path": "data/G0.edgelist",
+      "witness_path": "data/G0_prime.edgelist",
+      "evidence_paths": ["data/G0.wl1.txt", "data/G0p.wl1.txt"]
+    },
+    {
+      "umo_id": "UMO_G1_WL1_0001",
+      "object_kind": "graph",
+      "n": 800,
+      "m": 1200,
+      "baseline": "WL-1",
+      "status": "non_minimal_witness",
+      "cert_path": "certs/UMO_G1_WL1_CERT_0001.json",
+      "object_path": "data/G1.edgelist",
+      "witness_path": "data/G1_prime.edgelist",
+      "evidence_paths": ["data/G1.wl1.txt", "data/G1p.wl1.txt"]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+r=0 n=50 wl1_equal=True
+r=1 n=100 wl1_equal=True
+r=2 n=200 wl1_equal=True
+r=3 n=400 wl1_equal=True
+r=4 n=800 wl1_equal=True
+MIN_FOUND r=0 n=50

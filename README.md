@@ -1,4 +1,5 @@
 ![Verify URF registry](https://github.com/inaciovasquez2020/urf-minimal-obstruction/actions/workflows/verify.yml/badge.svg)
+
 URF Minimal Obstruction (UMO)
 
 Goal: define and publish a smallest concrete object X with:

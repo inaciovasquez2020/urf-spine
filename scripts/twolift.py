@@ -5,13 +5,19 @@ import sys
 def two_lift(G, seed=0):
     rng = random.Random(seed)
     H = nx.Graph()
+
+    # map nodes to integer pairs
     for v in G.nodes():
         H.add_node((v,0))
         H.add_node((v,1))
+
     for (u,v) in G.edges():
         s = rng.choice([0,1])
         H.add_edge((u,0),(v,s))
         H.add_edge((u,1),(v,1-s))
+
+    # canonical relabel to integers
+    H = nx.convert_node_labels_to_integers(H, ordering="sorted")
     return H
 
 if __name__ == "__main__":

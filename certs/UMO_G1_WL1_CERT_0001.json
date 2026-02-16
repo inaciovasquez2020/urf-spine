@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "schema_id": "urf:umo-cert:1.0",
+    "cert_id": "UMO_G1_WL1_CERT_0001",
+    "created_utc": "2026-02-15T00:00:00Z",
+    "toolkit_version": "urf/1.x"
+  },
+  "object": {
+    "kind": "graph",
+    "size": { "n": 800, "m": 1200 },
+    "content_hash": "sha256:TO_FILL"
+  },
+  "claim": {
+    "statement_id": "P1",
+    "statement": "G1 exhibits a URF support-drift obstruction implying WL-1 indistinguishability."
+  },
+  "baseline": {
+    "family": "WL",
+    "version_pin": "WL-1 (deterministic implementation)",
+    "claim": "WL-1 distinguishes G1 from G1_prime."
+  },
+  "evidence": {
+    "result": "baseline_failed",
+    "repro_cmds": [
+      "python3 scripts/wl1.py data/G1.edgelist",
+      "python3 scripts/wl1.py data/G1_prime.edgelist",
+      "diff data/G1.wl1.txt data/G1p.wl1.txt"
+    ]
+  },
+  "provenance": {
+    "git_commit": "6e3895c",
+    "verifier": "manual",
+    "platform": "macos-arm64"
+  }
+}

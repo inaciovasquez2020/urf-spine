@@ -1,0 +1,35 @@
+{
+  "meta": {
+    "schema_id": "urf:umo-cert:1.0",
+    "cert_id": "UMO_G0_WL1_CERT_0001",
+    "created_utc": "2026-02-15T00:00:00Z",
+    "toolkit_version": "urf/1.x"
+  },
+  "object": {
+    "kind": "graph",
+    "size": { "n": 50, "m": 75 },
+    "content_hash": "sha256:<HEX_HASH>"
+  },
+  "claim": {
+    "statement_id": "P1-WL1",
+    "statement": "G0 is a URF-minimal obstruction relative to WL-1 (witnessed by indistinguishability from G0_prime)."
+  },
+  "baseline": {
+    "family": "WL",
+    "version_pin": "WL-1 (scripts/wl1.py)",
+    "claim": "WL-1 distinguishes G0 from G0_prime."
+  },
+  "evidence": {
+    "result": "baseline_failed",
+    "repro_cmds": [
+      "python3 scripts/wl1.py data/G0.edgelist > data/G0.wl1.txt",
+      "python3 scripts/wl1.py data/G0_prime.edgelist > data/G0p.wl1.txt",
+      "diff data/G0.wl1.txt data/G0p.wl1.txt"
+    ]
+  },
+  "provenance": {
+    "git_commit": "<COMMIT_9_1>",
+    "verifier": "manual",
+    "platform": "macos-arm64"
+  }
+}

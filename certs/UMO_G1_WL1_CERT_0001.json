@@ -12,7 +12,7 @@
   },
   "claim": {
     "statement_id": "P1",
-    "statement": "G1 exhibits a URF support-drift obstruction implying WL-1 indistinguishability."
+    "statement": "G1 exhibits a NON-MINIMAL witness of WL-1 indistinguishability (minimal is G0)."
   },
   "baseline": {
     "family": "WL",

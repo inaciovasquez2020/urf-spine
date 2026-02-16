@@ -12,7 +12,8 @@
   },
   "claim": {
     "statement_id": "P1-WL1",
-    "statement": "G0 is a URF-minimal obstruction relative to WL-1 (witnessed by indistinguishability from G0_prime)."
+    "statement": "G0 is a URF-minimal obstruction relative to WL-1 (witnessed by indistinguishability from G0_prime).",
+    "baselines_failed": ["WL-1", "spectral"]
   },
   "baseline": {
     "family": "WL",
@@ -24,12 +25,16 @@
     "repro_cmds": [
       "python3 scripts/wl1.py data/G0.edgelist > data/G0.wl1.txt",
       "python3 scripts/wl1.py data/G0_prime.edgelist > data/G0p.wl1.txt",
-      "diff data/G0.wl1.txt data/G0p.wl1.txt"
+      "diff data/G0.wl1.txt data/G0p.wl1.txt",
+      "python3 scripts/spectral.py data/G0.edgelist > data/G0.spec.txt",
+      "python3 scripts/spectral.py data/G0_prime.edgelist > data/G0p.spec.txt",
+      "diff data/G0.spec.txt data/G0p.spec.txt"
     ]
   },
   "provenance": {
     "git_commit": "12047af",
-    "verifier": "manual",
+    "verifier": "scripts/verify_registry.py",
     "platform": "macos-arm64"
   }
 }
+

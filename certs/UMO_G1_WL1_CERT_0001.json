@@ -8,7 +8,7 @@
   "object": {
     "kind": "graph",
     "size": { "n": 800, "m": 1200 },
-    "content_hash": "sha256:TO_FILL"
+    "content_hash": "sha256:c1ad11c9944223f02c1023329b81638919855375270385734f04a2a6d72b8ae8"
   },
   "claim": {
     "statement_id": "P1",

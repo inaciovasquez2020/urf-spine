@@ -1,1 +1,2 @@
 .lake/
+certs/spine/*.key

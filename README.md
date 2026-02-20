@@ -1,7 +1,17 @@
-URF Reductions to SAT/CSP (Navigation Repo)
+# URF Reductions: SAT / CSP
 
-Purpose
-Single place to map URF invariants and admissibility conditions into explicit reductions (SAT, CSP, CNF encodings, incidence structures) with stable permalinks into canonical repos.
+This repository collects canonical reduction templates and proof sketches
+connecting Unified Rigidity Framework (URF) problems with Boolean SAT and
+general CSP formulations.
 
-This repo starts as navigation and protocol. Implementations can be imported later as submodules or copied in with provenance.
+It includes:
+- reduction constructions,
+- correctness sketches,
+- complexity relationships,
+- formalization notes.
 
+## Links
+
+- **Formal Cyclone closure:** https://github.com/inaciovasquez2020/cyclone-terminal-obstruction
+- **Chronos–EntropyDepth kernel:** https://github.com/inaciovasquez2020/Chronos-EntropyDepth
+- **URF core framework:** https://github.com/inaciovasquez2020/urf-core

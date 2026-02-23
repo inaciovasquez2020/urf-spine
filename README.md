@@ -1,39 +1,31 @@
-# urf-spine
+# URF Spine
 
-Invariant anchor + canonicalization + certificate composition layer for URF modules.
+The URF Spine is the **structural backbone** of the Unified Rigidity Framework (URF).
 
-## Objects
-- **Spine Functor**: `URFMod -> SpineRep` (see `spine/invariants/spine_functor.md`)
-- **SNF** (Spine Normal Form): deterministic canonical reduction (see `verification/snf.py`)
-- **Certificate schema**: `spine/certificates/schema_spine_certificate.json`
-- **Verifier**: `verification/spine_verify.py`
+It defines canonical forms, invariants, and certificate structure shared across URF modules, ensuring consistency and preventing duplication of foundational machinery.
 
-## Quick start (local)
-- Verify an example certificate:
-  - `python3 verification/spine_verify.py examples/minimal_spine_certificate.json`
-- Produce SNF:
-  - `python3 verification/snf.py examples/minimal_spine_certificate.json`
+## Role
+- Acts as the invariant anchor and canonicalization layer for URF.
+- Provides shared abstractions used by multiple URF components.
+- Supports certificate composition and verification workflows.
 
-## Links
-- urf-core: https://github.com/inaciovasquez2020/urf-core
-- chronos-entropydepth: https://github.com/inaciovasquez2020/chronos-entropydepth
+## What lives here
+- Canonicalization mechanisms (e.g. Spine Normal Form).
+- Invariant representations and shared structural maps.
+- Certificate schemas and verification utilities.
 
-## Status (2026)
+## Dependencies
+Consumed by:
+- urf-core
+- chronos-entropydepth
+- chronos-urf-rr
+- urf-verifier
 
-The URF reduction is complete up to a single analytic wall, the
-Clause Contraction Lemma (CCL). The FO^k locality wall is conditionally
-closed via Configuration Pumping; EF Cycle–Linkage and related traps
-are retired. XYSTEM remains explicitly open and independent of FO^k
-locality. Canonical reduction summary:
+This repository does not depend on application-specific or domain-specific URF modules.
 
-- https://github.com/inaciovasquez2020/urf-core/blob/main/docs/REDUCTION_STATUS.md
+## Status
+Stable structural module.
+Changes occur only to preserve cross-repository consistency.
 
-## Quickstart (60 seconds)
-
-```bash
-./scripts/spine check
-```
-
-## OWC Boundary Suite
-Adversarial and boundary constructions for OWC-related rigidity claims:
-https://github.com/inaciovasquez2020/owc-counterexamples
+## Further documentation
+Detailed specifications, scripts, and technical notes are maintained within the repository subdirectories and linked documentation files.

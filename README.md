@@ -33,3 +33,7 @@ locality. Canonical reduction summary:
 ```bash
 ./scripts/spine check
 ```
+
+## OWC Boundary Suite
+Adversarial and boundary constructions for OWC-related rigidity claims:
+https://github.com/inaciovasquez2020/owc-counterexamples

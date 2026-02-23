@@ -1,0 +1,8 @@
+
+      - name: Spine invariant checks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          assert Path("docs/SPINE_INVARIANTS.md").exists()
+          assert Path("CONTRIBUTING.md").exists()
+          PY

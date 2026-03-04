@@ -1,0 +1,8 @@
+{
+  "urf_core": "stable",
+  "chronos": "verified",
+  "entropy_depth": "verified",
+  "verification_infrastructure": "stable",
+  "remaining_frontier": "oblivion_atom",
+  "program_completion_estimate": 0.96
+}

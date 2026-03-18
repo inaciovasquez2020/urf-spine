@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "locality_radius": {"type": "integer"},
+    "degree_bound": {"type": "integer"},
+    "entropy_depth": {"type": "integer"},
+    "cycle_rank": {"type": "integer"},
+    "spectral_gap": {"type": "number"}
+  },
+  "required": [
+    "locality_radius",
+    "degree_bound",
+    "entropy_depth",
+    "cycle_rank",
+    "spectral_gap"
+  ]
+}

@@ -4,3 +4,15 @@
 
       - name: Verify signature
         run: python tools/verify_signature.py
+
+      - name: Generate export
+        run: python tools/extract_invariants.py > output.json
+
+      - name: Verify pipeline
+        run: python tools/verify_signature.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: urf-spine-export
+          path: output.json

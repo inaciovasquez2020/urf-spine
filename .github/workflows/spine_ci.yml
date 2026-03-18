@@ -36,3 +36,8 @@
         run: |
           python tools/profile_memory.py
           test -s memory.txt
+
+      - name: Check batch lock
+        run: |
+          python tools/batch_extract.py
+          diff batch_output.json tests/batch_snapshot.json

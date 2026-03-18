@@ -1,0 +1,22 @@
+[
+  {
+    "file": "graph1.json",
+    "invariants": {
+      "locality_radius": 1,
+      "degree_bound": 1,
+      "entropy_depth": 3,
+      "cycle_rank": 0,
+      "spectral_gap": 0.25
+    }
+  },
+  {
+    "file": "graph2.json",
+    "invariants": {
+      "locality_radius": 1,
+      "degree_bound": 1,
+      "entropy_depth": 4,
+      "cycle_rank": 1,
+      "spectral_gap": 0.2
+    }
+  }
+]

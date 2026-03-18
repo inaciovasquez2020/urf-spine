@@ -51,3 +51,7 @@
         run: |
           pip install mypy
           mypy tools || true
+
+      - name: Required checks only
+        if: github.ref == 'refs/heads/main'
+        run: echo "CI locked"

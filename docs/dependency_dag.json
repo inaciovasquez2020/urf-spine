@@ -7,7 +7,7 @@
     "mixing_complexity"
   ],
   "edges": [
-    {"from": "locality", "to": "entropy_depth", "weight": 1},
+    {"from": "locality", "to": "entropy_depth", "weight": 1, "type": "constraint"},
     {"from": "capacity", "to": "entropy_depth", "weight": 1},
     {"from": "spectral_gap", "to": "rigidity", "weight": 2},
     {"from": "mixing_complexity", "to": "entropy_depth", "weight": 1}

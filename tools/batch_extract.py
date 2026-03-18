@@ -1,4 +1,6 @@
-import json, os
+import json, os, sys
+sys.path.append(os.path.abspath("."))
+
 from tools.extract_invariants import extract
 
 results = []

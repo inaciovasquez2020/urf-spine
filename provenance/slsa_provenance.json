@@ -1,0 +1,8 @@
+{
+  "buildType": "urf-spine-local",
+  "builder": "local",
+  "materials": ["output.json", "batch_output.json"],
+  "metadata": {
+    "version": "1.0.1"
+  }
+}

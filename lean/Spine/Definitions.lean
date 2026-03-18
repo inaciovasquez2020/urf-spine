@@ -11,3 +11,6 @@ structure InvariantsExtended where
 
 structure InvariantsFlux where
   flux_complexity : Nat
+
+structure InvariantsKernel where
+  kernel_defect : Nat

@@ -17,3 +17,6 @@ structure InvariantsKernel where
 
 structure InvariantsTranscript where
   transcript_capacity : Nat
+
+structure InvariantsAdmissibility where
+  admissibility_width : Nat

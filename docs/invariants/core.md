@@ -11,3 +11,5 @@ M(G) ≤ R * Δ
 - kernel_defect K(G): dimension of near-kernel of the Laplacian (ε-spectrum)
 
 - transcript_capacity T(G): maximal information gain per refinement step
+
+- admissibility_width A(G): maximal width of admissible refinement states

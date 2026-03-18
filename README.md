@@ -24,7 +24,7 @@ Consumed by:
 This repository does not depend on application-specific or domain-specific URF modules.
 
 ## Status
-Stable structural module.
+Stable structural module (frozen, versioned, reproducible).
 Changes occur only to preserve cross-repository consistency.
 
 ## Further documentation
@@ -34,3 +34,4 @@ Detailed specifications, scripts, and technical notes are maintained within the 
 ![status](reproducibility_badge.txt)
 
 All artifacts verified and reproducible (see release_manifest.json).
+- Release integrity: SBOM + SLSA + IPFS + signatures enforced.

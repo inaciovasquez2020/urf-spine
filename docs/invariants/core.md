@@ -13,3 +13,5 @@ M(G) ≤ R * Δ
 - transcript_capacity T(G): maximal information gain per refinement step
 
 - admissibility_width A(G): maximal width of admissible refinement states
+
+- refinement_curvature R_c(G): second-order growth rate of entropy depth under refinement

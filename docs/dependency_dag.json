@@ -9,7 +9,8 @@
     "flux_complexity",
     "kernel_defect",
     "transcript_capacity",
-    "admissibility_width"
+    "admissibility_width",
+    "refinement_curvature"
   ],
   "edges": [
     {"from": "locality", "to": "entropy_depth", "weight": 1, "type": "constraint"},
@@ -20,6 +21,7 @@
     {"from": "flux_complexity", "to": "support_diameter", "weight": 1},
     {"from": "kernel_defect", "to": "spectral_gap", "weight": 2},
     {"from": "transcript_capacity", "to": "entropy_depth", "weight": 2},
-    {"from": "admissibility_width", "to": "transcript_capacity", "weight": 1}
+    {"from": "admissibility_width", "to": "transcript_capacity", "weight": 1},
+    {"from": "refinement_curvature", "to": "entropy_depth", "weight": 2}
   ]
 }

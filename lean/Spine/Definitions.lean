@@ -20,3 +20,6 @@ structure InvariantsTranscript where
 
 structure InvariantsAdmissibility where
   admissibility_width : Nat
+
+structure InvariantsCurvature where
+  refinement_curvature : Nat

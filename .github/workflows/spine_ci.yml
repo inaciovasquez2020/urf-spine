@@ -26,3 +26,8 @@
         run: |
           python tools/batch_extract.py
           test -s batch_output.json
+
+      - name: Benchmark
+        run: |
+          python tools/benchmark.py
+          test -s benchmark.txt

@@ -21,3 +21,8 @@
         run: |
           python tools/extract_invariants.py > output.json
           test -s output.json
+
+      - name: Validate batch schema
+        run: |
+          python tools/batch_extract.py
+          test -s batch_output.json

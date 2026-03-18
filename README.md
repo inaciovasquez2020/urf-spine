@@ -29,3 +29,8 @@ Changes occur only to preserve cross-repository consistency.
 
 ## Further documentation
 Detailed specifications, scripts, and technical notes are maintained within the repository subdirectories and linked documentation files.
+
+## Reproducibility
+![status](reproducibility_badge.txt)
+
+All artifacts verified and reproducible (see release_manifest.json).

@@ -10,7 +10,8 @@
     "kernel_defect",
     "transcript_capacity",
     "admissibility_width",
-    "refinement_curvature"
+    "refinement_curvature",
+    "energy_defect"
   ],
   "edges": [
     {"from": "locality", "to": "entropy_depth", "weight": 1, "type": "constraint"},
@@ -22,6 +23,7 @@
     {"from": "kernel_defect", "to": "spectral_gap", "weight": 2},
     {"from": "transcript_capacity", "to": "entropy_depth", "weight": 2},
     {"from": "admissibility_width", "to": "transcript_capacity", "weight": 1},
-    {"from": "refinement_curvature", "to": "entropy_depth", "weight": 2}
+    {"from": "refinement_curvature", "to": "entropy_depth", "weight": 2},
+    {"from": "energy_defect", "to": "spectral_gap", "weight": 2}
   ]
 }

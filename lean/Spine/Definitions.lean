@@ -23,3 +23,6 @@ structure InvariantsAdmissibility where
 
 structure InvariantsCurvature where
   refinement_curvature : Nat
+
+structure InvariantsEnergy where
+  energy_defect : Nat

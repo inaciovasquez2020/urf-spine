@@ -15,3 +15,5 @@ M(G) ≤ R * Δ
 - admissibility_width A(G): maximal width of admissible refinement states
 
 - refinement_curvature R_c(G): second-order growth rate of entropy depth under refinement
+
+- energy_defect E(G): deviation from coercive spectral energy bound

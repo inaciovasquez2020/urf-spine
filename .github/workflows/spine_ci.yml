@@ -31,3 +31,8 @@
         run: |
           python tools/benchmark.py
           test -s benchmark.txt
+
+      - name: Memory check
+        run: |
+          python tools/profile_memory.py
+          test -s memory.txt

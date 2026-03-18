@@ -8,3 +8,6 @@ theorem mixing_monotone (a b : Nat) : a ≤ b → a ≤ b := by
 
 structure InvariantsExtended where
   support_diameter : Nat
+
+structure InvariantsFlux where
+  flux_complexity : Nat

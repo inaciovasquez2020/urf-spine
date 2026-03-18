@@ -5,13 +5,15 @@
     "entropy_depth",
     "spectral_gap",
     "mixing_complexity",
-    "support_diameter"
+    "support_diameter",
+    "flux_complexity"
   ],
   "edges": [
     {"from": "locality", "to": "entropy_depth", "weight": 1, "type": "constraint"},
     {"from": "capacity", "to": "entropy_depth", "weight": 1},
     {"from": "spectral_gap", "to": "rigidity", "weight": 2},
     {"from": "mixing_complexity", "to": "entropy_depth", "weight": 1},
-    {"from": "support_diameter", "to": "locality", "weight": 1}
+    {"from": "support_diameter", "to": "locality", "weight": 1},
+    {"from": "flux_complexity", "to": "support_diameter", "weight": 1}
   ]
 }

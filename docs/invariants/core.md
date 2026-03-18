@@ -5,3 +5,5 @@ Constraint:
 M(G) ≤ R * Δ
 
 - support_diameter S(G): maximal diameter of minimal witnesses
+
+- flux_complexity F(G): minimal number of independent cycle-flux generators

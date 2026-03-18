@@ -1,4 +1,6 @@
-import json
+import json, sys, os
+sys.path.append(os.path.abspath("."))
+
 from tools.cache import get, set
 from tools.graph_id import compute_id
 

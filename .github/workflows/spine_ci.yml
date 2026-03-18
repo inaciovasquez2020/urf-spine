@@ -16,3 +16,8 @@
         with:
           name: urf-spine-export
           path: output.json
+
+      - name: Fail on empty export
+        run: |
+          python tools/extract_invariants.py > output.json
+          test -s output.json

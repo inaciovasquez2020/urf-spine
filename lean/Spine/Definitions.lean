@@ -14,3 +14,6 @@ structure InvariantsFlux where
 
 structure InvariantsKernel where
   kernel_defect : Nat
+
+structure InvariantsTranscript where
+  transcript_capacity : Nat

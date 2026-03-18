@@ -9,3 +9,5 @@ M(G) ≤ R * Δ
 - flux_complexity F(G): minimal number of independent cycle-flux generators
 
 - kernel_defect K(G): dimension of near-kernel of the Laplacian (ε-spectrum)
+
+- transcript_capacity T(G): maximal information gain per refinement step

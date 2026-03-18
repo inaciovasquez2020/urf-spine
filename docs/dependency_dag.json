@@ -7,7 +7,8 @@
     "mixing_complexity",
     "support_diameter",
     "flux_complexity",
-    "kernel_defect"
+    "kernel_defect",
+    "transcript_capacity"
   ],
   "edges": [
     {"from": "locality", "to": "entropy_depth", "weight": 1, "type": "constraint"},
@@ -16,6 +17,7 @@
     {"from": "mixing_complexity", "to": "entropy_depth", "weight": 1},
     {"from": "support_diameter", "to": "locality", "weight": 1},
     {"from": "flux_complexity", "to": "support_diameter", "weight": 1},
-    {"from": "kernel_defect", "to": "spectral_gap", "weight": 2}
+    {"from": "kernel_defect", "to": "spectral_gap", "weight": 2},
+    {"from": "transcript_capacity", "to": "entropy_depth", "weight": 2}
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "title": "URF Spine v1.0.1 — Fully Verified, Reproducible Standard",
+  "creators": [
+    {
+      "name": "Vasquez, Inacio"
+    }
+  ],
+  "description": "Fully verified and reproducible invariant extraction framework with signed artifacts, CI validation, and audit pipeline.",
+  "upload_type": "software",
+  "license": "MIT",
+  "version": "1.0.1",
+  "keywords": [
+    "rigidity",
+    "invariants",
+    "reproducibility",
+    "verification",
+    "entropy depth"
+  ]
+}

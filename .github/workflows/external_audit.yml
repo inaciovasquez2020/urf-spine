@@ -1,0 +1,39 @@
+name: External Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run extractor
+        run: python tools/extract_invariants.py > output.json
+      - name: Run independent verifier
+        run: python verifier/independent_verify.py
+      - name: Run hash chain
+        run: python tools/hash_chain.py
+      - name: Emit certificate
+        run: |
+          python - << 'PY'
+          import hashlib
+          with open("hash_chain.txt") as f:
+              h = f.read().strip()
+          cert = hashlib.sha256(("URF-SPINE-REPRODUCIBILITY:" + h).encode()).hexdigest()
+          with open("certs/reproducibility_certificate.txt","w") as out:
+              out.write(cert + "\n")
+          PY
+      - name: Upload audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: urf-spine-audit
+          path: |
+            output.json
+            hash_chain.txt
+            certs/reproducibility_certificate.txt

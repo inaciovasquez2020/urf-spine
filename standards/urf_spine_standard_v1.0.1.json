@@ -1,0 +1,14 @@
+{
+  "invariants": [
+    "locality_radius",
+    "degree_bound",
+    "entropy_depth",
+    "cycle_rank",
+    "spectral_gap"
+  ],
+  "constraints": [
+    "entropy_depth >= 0",
+    "cycle_rank >= 0",
+    "degree_bound >= 1"
+  ]
+}

@@ -3,3 +3,5 @@
 
 Constraint:
 M(G) ≤ R * Δ
+
+- support_diameter S(G): maximal diameter of minimal witnesses

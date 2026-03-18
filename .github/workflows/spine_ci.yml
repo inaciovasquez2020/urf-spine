@@ -41,3 +41,13 @@
         run: |
           python tools/batch_extract.py
           diff batch_output.json tests/batch_snapshot.json
+
+      - name: Coverage
+        run: |
+          pip install coverage
+          coverage run -m pytest
+
+      - name: Type check
+        run: |
+          pip install mypy
+          mypy tools || true

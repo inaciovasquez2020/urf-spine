@@ -1,10 +1,11 @@
-import json
+import argparse, json
 from tools.extract_invariants import extract
 
-def main():
-    graph = {}
-    data = extract(graph)
-    print(json.dumps(data, indent=2))
+parser = argparse.ArgumentParser()
+parser.add_argument("--input", default="data/sample_graph.json")
+args = parser.parse_args()
 
-if __name__ == "__main__":
-    main()
+with open(args.input) as f:
+    g = json.load(f)
+
+print(json.dumps(extract(g), indent=2))

@@ -1,3 +1,6 @@
 
       - name: Run extractor
         run: python tools/extract_invariants.py
+
+      - name: Verify signature
+        run: python tools/verify_signature.py

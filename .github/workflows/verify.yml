@@ -1,21 +1,9 @@
-name: Verify URF registry
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-
+name: verify
+on: [push]
 jobs:
-  verify:
+  check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Verify registry and certificates
-        run: |
-          python scripts/verify_registry.py
+      - uses: actions/checkout@v3
+      - name: Run certificate check
+        run: python3 infra/ci/verify_certificate.py

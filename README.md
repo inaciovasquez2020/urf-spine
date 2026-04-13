@@ -35,3 +35,28 @@ Detailed specifications, scripts, and technical notes are maintained within the 
 
 All artifacts verified and reproducible (see release_manifest.json).
 - Release integrity: SBOM + SLSA + IPFS + signatures enforced.
+
+## Current Status
+
+- canonical
+- invariant-anchor-layer
+- frozen
+- versioned
+- reproducible
+- certificate-verified
+- not theorem-prover-complete
+- not a primary mathematics-closure repository
+
+This repository is the invariant-anchor and canonicalization layer for URF.
+It does not assert independent scientific claims on its own, and it does not serve as the canonical location
+for final theorem closure of downstream URF mathematics.
+
+## Compatibility Boundary
+
+Compatibility is guaranteed only within the declared version/toolchain bounds.
+Compatibility outside those bounds is not guaranteed.
+
+## Canonical Scope Pointer
+
+See `SCOPE_LIMITATIONS_STATUS.md` for the authoritative scope and limitations surface.
+

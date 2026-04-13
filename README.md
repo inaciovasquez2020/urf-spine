@@ -34,3 +34,25 @@ chronos-urf-rr/manuscripts/communication_information_reduction
 chronos-urf-rr/manuscripts/tseitin_ic_lower_bound
 
 ---
+
+## Current Status
+
+- canonical
+- reduction-template-layer
+- certificate-verified
+- not theorem-prover-complete
+- not a primary mathematics-closure repository
+
+This repository is a reduction-template and proof-sketch layer.
+It does not currently serve as the canonical location for final theorem closure of the SAT/CSP program.
+
+## Live Missing Objects
+
+- gadget catalog with hashes
+- reduction scripts with fixed seeds
+- verifier hooks
+
+## Canonical Scope Pointer
+
+See `SCOPE_LIMITATIONS_STATUS.md` for the authoritative scope and limitations surface.
+

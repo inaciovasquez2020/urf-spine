@@ -1,85 +1,43 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18651031.svg)](https://doi.org/10.5281/zenodo.18651031)
+# urf-wl2-obstruction
 
-# NCR — New Computational Regime (ISR)
-
-This repository documents the **New Computational Regime (NCR)** based on the **Implicit Superposition Register (ISR)** model.
-
-ISR is a discrete, deterministic computational model whose state is a **reduced ordered decision diagram** representing an exponentially large set of assignments.  
-Updates apply constraints by **symbolic conjunction**, without enumerating assignments.
-
-The regime is designed to study **normalization-resistant computation**: systems where standard polynomial normalization techniques fail structurally, not accidentally.
-
----
-
-## Manuscripts
-
-Primary manuscript:
-- `manuscript/ISR_as_a_Normalization_Resistant_Polynomial_Regime.md`
-
-Supplementary minimal note:
-- `manuscript/ISR_Normalization_Resistance.md`
-
-These notes provide a structural description of the ISR regime and its resistance to normalization-based reductions.
-
----
-
-## Model Overview
-
-**ISR = Implicit Superposition Register**
-
-- State: symbolic representation of an exponential assignment space
-- Dynamics: constraint application via symbolic conjunction
-- No enumeration of assignments
-- Deterministic update semantics
-- Polynomial-time operations over exponentially large implicit state
-
-This repository is concerned with **structural properties**, not performance claims.
-
----
-
-## Artifacts
-
-Core materials included here:
-
-- `docs/MODEL.md`
-- `docs/INVARIANTS.md`
-- `model/isr.py`
-- `scripts/run_isr_demo.py`
-- `scripts/normalization_attempt.py`
-- `scripts/oracle_audit.py`
-- `tests/`
-
-These artifacts exist to support inspection, experimentation, and verification of the ISR structure.
-
----
+Deterministic WL-style obstruction artifact for URF.
 
 ## Scope
 
-This repository:
-- Documents a computational *regime*
-- Demonstrates normalization resistance structurally
-- Provides reference implementations for inspection
+This repository is a documentation-plus-artifact reference surface for a WL obstruction program.
 
-This repository does **not**:
-- Claim algorithmic speedups
-- Resolve P vs NP
-- Provide complexity-theoretic separations
-- Assert empirical performance dominance
+It may contain code, registries, scripts, certificates, and workflows supporting inspection and reproducibility.
 
----
+## Canonical Boundary
 
-## Certification Boundary
+The canonical public identity of this repository is the WL obstruction artifact itself.
 
-This repository is **NON-CERTIFIED under URF**.
+Repository materials should remain consistent with:
 
-Only **NEGATIVE certification artifacts** may be present.  
-No positive NCR claim is asserted.  
-All results are research or infrastructure-only.
+- repository name: `urf-wl2-obstruction`
+- About text: deterministic WL-style obstruction witness
+- release surface: obstruction artifact / witness
+- non-claims: no unrelated NCR / ISR regime claims
 
-Certification artifacts, where present, are:
-- Declarative
-- Cryptographically signed
-- Inert with respect to CI and runtime behavior
+## Included Artifact Classes
 
-No guarantees are made beyond explicitly stated theoretical boundaries.
+- `docs/`
+- `registry/`
+- `certs/`
+- `scripts/`
+- `tools/urf-wl2-obstruction/`
+- `artifacts/`
+- `data/`
+- CI/workflow support
 
+## Non-Claims
+
+This repository does not, by itself:
+
+- prove a general complexity-class separation
+- certify unrelated computational regimes
+- make performance claims outside explicitly documented scope
+
+## Status
+
+Repository-scope obstruction artifact with supporting verification infrastructure.

@@ -1,0 +1,46 @@
+{
+  "schema_version": "triplet/1.0",
+  "certificate_id": "TRIPLET_NOGO_0001",
+  "kind": "TRIPLET_NOGO",
+
+  "instance": {
+    "family": "Tn_signed_2lift",
+    "base_graph": "H4_cycle_plus_chord",
+    "seed": 1,
+    "t": 5
+  },
+
+  "artifacts": {
+    "edgelist_path": "artifacts/Tn_gold.edgelist",
+    "edgelist_sha256": "e3044b83575b856d40c52028937d2f48f80385c69847d40d4ee312fa54e46681"
+  },
+
+  "invariants": {
+    "n": 4096,
+    "m": 5120,
+    "components": 1,
+    "cycle_rank": 1025
+  },
+
+  "thresholds": {
+    "tau_cycle_rank": 1000,
+    "holds": true
+  },
+
+  "claims": [
+    {
+      "name": "WL3_NOGO",
+      "statement": "The instance family T_n resists all WL^3 / FO^3 refinements up to the certified threshold.",
+      "status": "Verified"
+    },
+    {
+      "name": "Oblivion_Slice_k3_D3_R2",
+      "statement": "For k=3, Δ=3, R=2, the finite ball automaton has bounded SCC structure, preventing unbounded local cycle-rank growth under FO^3-local homogeneity.",
+      "status": "Conditional",
+      "dependencies": [
+        "Automaton_SCC_Bound_k3_D3_R2"
+      ]
+    }
+  ]
+}
+

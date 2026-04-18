@@ -1,55 +1,72 @@
+name: spine-ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
       - name: Run extractor
-        run: python tools/extract_invariants.py
+        run: python3 tools/extract_invariants.py
 
       - name: Verify signature
-        run: python tools/verify_signature.py
+        run: python3 tools/verify_signature.py
 
       - name: Generate export
-        run: python tools/extract_invariants.py > output.json
+        run: python3 tools/extract_invariants.py > output.json
 
       - name: Verify pipeline
-        run: python tools/verify_signature.py
+        run: python3 tools/verify_signature.py
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: urf-spine-export
           path: output.json
 
       - name: Fail on empty export
-        run: |
-          python tools/extract_invariants.py > output.json
-          test -s output.json
+        run: test -s output.json
 
       - name: Validate batch schema
         run: |
-          python tools/batch_extract.py
+          python3 tools/batch_extract.py
           test -s batch_output.json
 
       - name: Benchmark
         run: |
-          python tools/benchmark.py
+          python3 tools/benchmark.py
           test -s benchmark.txt
 
       - name: Memory check
         run: |
-          python tools/profile_memory.py
+          python3 tools/profile_memory.py
           test -s memory.txt
 
       - name: Check batch lock
         run: |
-          python tools/batch_extract.py
-          diff batch_output.json tests/batch_snapshot.json
+          python3 tools/batch_extract.py
+          diff -u tests/batch_snapshot.json batch_output.json
 
       - name: Coverage
         run: |
-          pip install coverage
+          python3 -m pip install coverage pytest
           coverage run -m pytest
 
       - name: Type check
         run: |
-          pip install mypy
+          python3 -m pip install mypy
           mypy tools || true
 
       - name: Required checks only

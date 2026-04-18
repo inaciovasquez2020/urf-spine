@@ -1,7 +1,6 @@
 name: Lean
 
 on:
-  workflow_dispatch:
   push:
   pull_request:
   workflow_dispatch:
@@ -14,17 +13,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  if: |n      exists('lean-toolchain') ||n      exists('proofs') ||n      exists('certs') ||n      exists('artifacts')
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
       - name: Install elan
         run: |
           curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
-          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
 
       - name: Verify Lean
         run: |
@@ -42,7 +39,7 @@ jobs:
 
       - name: Guard: forbid List.sort in spine/lean
         run: |
-          if grep -R --line-number "List.sort" spine/lean; then
+          if [ -d spine/lean ] && grep -R --line-number "List.sort" spine/lean; then
             echo "ERROR: List.sort is forbidden"
             exit 1
           fi

@@ -1,0 +1,7 @@
+{
+  "name": "fok-wall-minimal",
+  "degree_bound": 3,
+  "logic": "FO^k",
+  "property": "local homogeneity",
+  "witnessed_failure": "superlinear entropy depth"
+}

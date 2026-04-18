@@ -1,0 +1,7 @@
+{
+  "name": "spectral-gap-minimal",
+  "operator_type": "self-adjoint",
+  "spectral_gap": "> 0",
+  "attempted_bypass": "sub-gap information storage",
+  "witnessed_failure": "operational coercivity"
+}

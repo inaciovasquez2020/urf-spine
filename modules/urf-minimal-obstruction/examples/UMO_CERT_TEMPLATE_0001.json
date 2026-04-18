@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "schema_id": "urf:umo-cert:1.0",
+    "cert_id": "UMO_CERT_TEMPLATE_0001",
+    "created_utc": "YYYY-MM-DDThh:mm:ssZ",
+    "toolkit_version": "urf/1.x"
+  },
+  "object": {
+    "kind": "graph",
+    "size": { "n": 0, "m": 0 },
+    "content_hash": "sha256:..."
+  },
+  "claim": {
+    "statement_id": "P1",
+    "statement": "URF-verifiable property P holds for X."
+  },
+  "baseline": {
+    "family": "WL",
+    "version_pin": "wl-k:?, impl:?, commit:?",
+    "claim": "Baseline predicts P (or distinguishes/non-distinguishes) on X."
+  },
+  "evidence": {
+    "result": "baseline_failed",
+    "repro_cmds": [
+      "command 1",
+      "command 2"
+    ]
+  },
+  "provenance": {
+    "git_commit": "to-fill",
+    "verifier": "to-fill",
+    "platform": "macos-arm64"
+  }
+}

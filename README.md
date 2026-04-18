@@ -37,6 +37,9 @@ All artifacts verified and reproducible (see release_manifest.json).
 - Release integrity: SBOM + SLSA + IPFS + signatures enforced.
 
 ## Current Status
+- release-certified
+- certified-obstruction-layer
+- reduction-template-layer
 
 - canonical
 - invariant-anchor-layer
@@ -60,3 +63,17 @@ Compatibility outside those bounds is not guaranteed.
 
 See `SCOPE_LIMITATIONS_STATUS.md` for the authoritative scope and limitations surface.
 
+
+## Live Missing Objects
+
+Tracked via scope and status layers.
+
+Claims apply only under declared constraints.
+
+- gadget catalog with hashes
+
+canonical reduction templates and proof sketches
+
+- reduction scripts with fixed seeds
+
+- verifier hooks

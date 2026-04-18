@@ -1,6 +1,8 @@
 # Scope and Limitations Status
 
 ## Repository Status
+- certified-obstruction-layer
+- reduction-template-layer
 - canonical
 - invariant-anchor-layer
 - frozen
@@ -56,3 +58,23 @@ Any future strengthening should be labeled as one of:
 - API stabilization
 - scope clarification
 and must not relabel the repository as theorem-complete without a new proof layer.
+
+Only bounded-round / rank-bounded FO^k statements are within validated scope.
+
+Unbounded-round pebble saturation and universal-cover reductions are outside validated scope.
+
+The remaining gap is executable reduction hardening, not theorem existence.
+
+canonical SAT/CSP reduction templates and proof sketches
+
+- release-certified
+
+certification-surface hardening and scope clarity
+
+- gadget catalog with hashes
+
+certified minimal obstructions for graph and inference baselines under URF
+
+- reduction scripts with fixed seeds
+
+- verifier hooks

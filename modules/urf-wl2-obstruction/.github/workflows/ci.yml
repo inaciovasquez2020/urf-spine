@@ -1,0 +1,46 @@
+name: WL Obstruction CI
+
+on:
+  push:
+    paths:
+      - "**/*.py"
+      - "scripts/**"
+      - "data/**"
+      - ".github/workflows/ci.yml"
+  pull_request:
+    paths:
+      - "**/*.py"
+      - "scripts/**"
+      - "data/**"
+      - ".github/workflows/ci.yml"
+
+jobs:
+  wl:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate CFI(Petersen) graphs
+        run: |
+          mkdir -p data
+          python3 scripts/cfi_petersen.py 0 > data/CFI_PETERSEN_0.edgelist
+          python3 scripts/cfi_petersen.py 1 > data/CFI_PETERSEN_1.edgelist
+
+      - name: WL-2 exact refinement (sanity)
+        run: |
+          python3 scripts/wl2_full.py data/CFI_PETERSEN_0.edgelist > /tmp/wl2_a.txt
+          python3 scripts/wl2_full.py data/CFI_PETERSEN_1.edgelist > /tmp/wl2_b.txt
+          diff /tmp/wl2_a.txt /tmp/wl2_b.txt || true
+
+      - name: WL-3 sampled refinement (distinguishing)
+        run: |
+          python3 scripts/wl3_sampled.py data/CFI_PETERSEN_0.edgelist 2 15 400 0 > /tmp/wl3_a.txt
+          python3 scripts/wl3_sampled.py data/CFI_PETERSEN_1.edgelist 2 15 400 0 > /tmp/wl3_b.txt
+          diff /tmp/wl3_a.txt /tmp/wl3_b.txt

@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "schema_id": "urf:minimal-obstruction-cert:1.0",
+    "cert_id": "URF_MIN_OBS_CERT_NEG_0001",
+    "mode": "NEGATIVE",
+    "created_utc": "2026-02-19T00:00:00Z"
+  },
+  "claim": {
+    "statement": "This instance does not satisfy minimal obstruction conditions under the declared constraints."
+  },
+  "instance": {
+    "description": "Trivial non-obstructing baseline instance",
+    "family": "baseline",
+    "parameters": {
+      "n": 4,
+      "m": 3
+    }
+  },
+  "constraints": {
+    "max_nodes": 10,
+    "max_degree": 2
+  },
+  "artifacts": [],
+  "non_claims": [
+    "No obstruction certified",
+    "No inference hardness implied",
+    "No generalization beyond stated bounds"
+  ]
+}

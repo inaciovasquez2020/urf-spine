@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urf:umo-cert:1.0",
+  "title": "URF Minimal Obstruction Certificate",
+  "type": "object",
+  "required": ["meta", "object", "claim", "baseline", "evidence", "provenance"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["schema_id", "cert_id", "created_utc", "toolkit_version"],
+      "properties": {
+        "schema_id": {"type": "string"},
+        "cert_id": {"type": "string"},
+        "created_utc": {"type": "string"},
+        "toolkit_version": {"type": "string"}
+      }
+    },
+    "object": {
+      "type": "object",
+      "required": ["kind", "size", "content_hash"],
+      "properties": {
+        "kind": {"type": "string", "enum": ["graph", "sat", "operator"]},
+        "size": {"type": "object"},
+        "content_hash": {"type": "string"}
+      }
+    },
+    "claim": {
+      "type": "object",
+      "required": ["statement_id", "statement"],
+      "properties": {
+        "statement_id": {"type": "string"},
+        "statement": {"type": "string"}
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "required": ["family", "version_pin", "claim"],
+      "properties": {
+        "family": {"type": "string", "enum": ["WL", "SDP", "ML", "heuristic"]},
+        "version_pin": {"type": "string"},
+        "claim": {"type": "string"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["result", "repro_cmds"],
+      "properties": {
+        "result": {"type": "string", "enum": ["baseline_failed", "baseline_succeeded"]},
+        "repro_cmds": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["git_commit", "verifier", "platform"],
+      "properties": {
+        "git_commit": {"type": "string"},
+        "verifier": {"type": "string"},
+        "platform": {"type": "string"}
+      }
+    }
+  }
+}

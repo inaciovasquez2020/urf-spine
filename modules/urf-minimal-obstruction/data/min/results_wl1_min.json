@@ -1,0 +1,37 @@
+[
+  {
+    "rounds": 0,
+    "n": 50,
+    "wl1_equal": true,
+    "A": "data/min/G_r0_A.edgelist",
+    "B": "data/min/G_r0_B.edgelist"
+  },
+  {
+    "rounds": 1,
+    "n": 100,
+    "wl1_equal": true,
+    "A": "data/min/G_r1_A.edgelist",
+    "B": "data/min/G_r1_B.edgelist"
+  },
+  {
+    "rounds": 2,
+    "n": 200,
+    "wl1_equal": true,
+    "A": "data/min/G_r2_A.edgelist",
+    "B": "data/min/G_r2_B.edgelist"
+  },
+  {
+    "rounds": 3,
+    "n": 400,
+    "wl1_equal": true,
+    "A": "data/min/G_r3_A.edgelist",
+    "B": "data/min/G_r3_B.edgelist"
+  },
+  {
+    "rounds": 4,
+    "n": 800,
+    "wl1_equal": true,
+    "A": "data/min/G_r4_A.edgelist",
+    "B": "data/min/G_r4_B.edgelist"
+  }
+]

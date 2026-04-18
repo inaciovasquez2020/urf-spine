@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "schema_id": "urf:minimal-obstruction-cert:1.0",
+    "cert_id": "URF_MIN_OBS_CERT_POS_0001",
+    "mode": "POSITIVE",
+    "created_utc": "2026-02-19T00:00:00Z"
+  },
+  "claim": {
+    "statement": "This instance constitutes a minimal obstruction under the declared constraints."
+  },
+  "instance": {
+    "description": "Minimal certified obstruction instance",
+    "family": "minimal-obstruction",
+    "parameters": {
+      "n": 6,
+      "m": 7
+    }
+  },
+  "constraints": {
+    "max_nodes": 10,
+    "max_degree": 3
+  },
+  "artifacts": [
+    {
+      "type": "edgelist",
+      "path": "data/minimal_obstruction.edgelist"
+    }
+  ],
+  "non_claims": [
+    "No asymptotic hardness claim",
+    "No generalization beyond stated constraints",
+    "No implication for higher-order WL"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "umo_id": "UMO_G0_WL1_0001",
+  "object_kind": "graph",
+  "n": 50,
+  "m": 75,
+  "baseline": "WL-1",
+  "status": "minimal",
+  "cert_path": "certs/UMO_G0_WL1_CERT_0001.json",
+  "object_path": "data/G0.edgelist",
+  "witness_path": "data/G0_prime.edgelist",
+  "evidence_paths": [
+    "data/G0.wl1.txt",
+    "data/G0p.wl1.txt",
+    "data/G0.spec.txt",
+    "data/G0p.spec.txt"
+  ]
+}
+

@@ -1,7 +1,24 @@
 cff-version: 1.2.0
-title: "URF Spine"
-version: "1.0.1"
+message: "If you use, mirror, index, summarize, evaluate, or build on this repository, cite the canonical repository record below."
+title: "urf-spine"
+type: software
 authors:
   - family-names: "Vasquez"
     given-names: "Inacio"
-date-released: 2026-03-18
+    orcid: "https://orcid.org/0009-0008-8459-3400"
+repository-code: "https://github.com/inaciovasquez2020/urf-spine"
+url: "https://github.com/inaciovasquez2020/urf-spine"
+license: "MIT"
+version: "main"
+date-released: 2026-04-20
+preferred-citation:
+  type: software
+  authors:
+    - family-names: "Vasquez"
+      given-names: "Inacio"
+      orcid: "https://orcid.org/0009-0008-8459-3400"
+  title: "urf-spine"
+  repository-code: "https://github.com/inaciovasquez2020/urf-spine"
+  url: "https://github.com/inaciovasquez2020/urf-spine"
+  version: "main"
+  date-released: 2026-04-20

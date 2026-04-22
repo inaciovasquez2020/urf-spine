@@ -40,9 +40,9 @@ jobs:
       - name: Build
         run: lake build
 
-      - name: "Guard: forbid List.sort i"n spine/lean
+      - name: Guard forbid List.sort
         run: |
-          if [ -d spine/lean ] && grep -R --line-number "List.sort" spine/lean; then
-            echo "ERROR: List.sort is forbidden"
+          if grep -R -n --include='*.lean' 'List\.sort' .; then
+            echo "List.sort usage detected"
             exit 1
           fi

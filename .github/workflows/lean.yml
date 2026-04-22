@@ -42,7 +42,7 @@ jobs:
 
       - name: Guard forbid List.sort
         run: |
-          if grep -R -n --include='*.lean' 'List\.sort' .; then
+          if git grep -n -E '\bList\.sort\b' -- '*.lean' ':(exclude).lake/**'; then
             echo "List.sort usage detected"
             exit 1
           fi

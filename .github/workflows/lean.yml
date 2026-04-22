@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: lake build
 
-      - name: Guard: forbid List.sort in spine/lean
+      - name: "Guard: forbid List.sort i"n spine/lean
         run: |
           if [ -d spine/lean ] && grep -R --line-number "List.sort" spine/lean; then
             echo "ERROR: List.sort is forbidden"
